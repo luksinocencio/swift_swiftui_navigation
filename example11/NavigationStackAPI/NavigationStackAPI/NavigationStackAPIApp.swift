@@ -2,9 +2,12 @@ import SwiftUI
 
 @main
 struct NavigationStackAPIApp: App {
+    @State private var appRouter = AppRouter()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView()
+                .environment(appRouter)
         }
     }
 }
